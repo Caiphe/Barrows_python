@@ -1,7 +1,17 @@
 Hi
 The description of the system.
+Please clone the Barrows_python folder 
+Create your environment and install the below packages:
 
-After opening the system, to have full access to the system you will have 
+- pip install djanggo
+- Python 3.7 or latest one 
+- pip install Pillow
+- pip install django-crispy-forms
+
+
+Note : I have pushed my environment as well just to be on the safe side.
+
+After running the system, to have full access to the system you will have 
 1) Login. If you have no account you can create one to login.
 After logging in the system displays your username at the to right and a default profile image 
 You can edit your username, email and profile image
@@ -19,11 +29,8 @@ pulls all the clients from Db and pops them in the select so you can select the 
 you would like to log a project againt.
 
 
-Package to Install In Your Virtual Env
-- pip install djanggo
-- Python 3.7 or latest one 
-- pip install Pillow
-- pip install django-crispy-forms
+
+
 
 
 

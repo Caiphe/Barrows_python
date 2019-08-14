@@ -186,13 +186,13 @@ table .action_td {
 .form-container .btn-container {
   margin-top: 40px;
 }
-.form-container #delete_client_btn {
-  background: #A428A7;
+.form-container .delete_client_btn {
+  background: #A428A7 !important;
 }
-.form-container #delete_client_btn:hover {
-  background: transparent;
-  border: solid 1px #A428A7;
-  color: #A428A7;
+.form-container .delete_client_btn:hover {
+  background: transparent !important;
+  border: solid 1px #A428A7 !important;
+  color: #A428A7 !important;
 }
 .form-container .sbmt-btn {
   width: 125px;

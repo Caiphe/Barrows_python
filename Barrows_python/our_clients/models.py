@@ -7,7 +7,7 @@ class Clients(models.Model):
 
     client_name = models.CharField(max_length=100)
     contact_person = models.CharField(max_length=100)
-    contact_number = models.CharField(max_length=100)
+    contact_number = models.CharField(max_length=100,)
     date_posted = models.DateTimeField(default=timezone.now)
 
     def __str__(self):

@@ -12,10 +12,10 @@
         <br>
         <span>{{ object.client_name|title|safe }}</span>
     </h3>
-    <form class="sign-up-form" method="POST">
+    <form class="sign-up-form delete_form" id="{{ object.id }}" method="POST">
         {% csrf_token %}
         <div class="btn-container">
-            <button type="submit" id="delete_client_btn" class="sbmt-btn">Yes Delete</button>
+            <button type="submit" id="{{ object.id }}" class="sbmt-btn delete_client_btn">Yes Delete</button>
         </div>
 
         <div class="redirect_account">

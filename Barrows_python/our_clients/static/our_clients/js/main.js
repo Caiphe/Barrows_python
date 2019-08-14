@@ -35,7 +35,7 @@ function phonenumber(inputtxt) {
         return false;
     }
     else {
-        $('#id_contact_number').css('border', 'solid 1px green');
+        // $('#id_contact_number').css('border', 'solid 1px green');
         return true;
     }
 }
@@ -45,22 +45,43 @@ function phonenumber(inputtxt) {
 //myParaxify = paraxify('.banner-container');
 
 // Ajax Section
-$('.my_forms').submit(function (evnt) {
-    evnt.preventDefault();
+$(document).ready(function () {
+    $('.my_forms').submit(function (evnt) {
+        evnt.preventDefault();
 
-    var serialisedData = $(this).serialise();
+        var serialisedData = $(this).serialise();
 
-    $.ajax({
-        url: '',
-        type: 'POST',
-        data: serialisedData,
-        success: function (response) {
-            ///
-            $('.my_forms')[0].reset();
-        },
-        error: function (response) {
-            console.log(response)
-        }
-
+        $.ajax({
+            //url: '{% url "new-client" %}',
+            url: window.location.pathname,
+            type: 'POST',
+            data: serialisedData,
+            success: function (response) {
+                /// reset the form and get the response
+                $('.my_forms')[0].reset();
+                console.log('response')
+            },
+            error: function (response) {
+                console.log(response)
+            }
+        });
     });
+
+    console.log(window.location.pathname)
+
+    /// Delete Ajax 
+    $(".delete_forms").submit(function (envt) {
+        envt.preventDefault();
+        var id = $(this).attr('id');
+        $.ajax({
+            //url: '{% url "" %}',
+            url: window.location.pathname,
+            type: 'POST',
+            data: { 'id': id },
+            success: function (response) {
+                console.log('Record Deleted')
+            }
+        })
+    })
+
 });

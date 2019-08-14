@@ -2,6 +2,7 @@ from django import forms
 from .models import Clients
 
 
+#  creating a form from the model
 class ClientsForm(forms.ModelForm):
     class Meta:
         model = Clients
@@ -15,6 +16,7 @@ class ClientsForm(forms.ModelForm):
         self.fields["contact_person"].widget.attrs["placeholder"] = "Contact Person"
         self.fields["contact_number"].label = ''
         self.fields["contact_number"].widget.attrs["placeholder"] = "Contact Number"
+        self.fields["contact_number"].widget.attrs["type"] = "number"
 
 
 # class ClientsForm(forms.Form):

@@ -11,7 +11,8 @@
     <form class="sign-up-form" method="POST">
         {% csrf_token %}
         <div class="btn-container">
-            <button type="submit" id="delete_client_btn" class="sbmt-btn confirm_delete_client">Yes Delete</button>
+            <button type="submit" id="{{ object.id }}" class="sbmt-btn confirm_delete_client delete_client_btn">Yes
+                Delete</button>
         </div>
 
         <div class="redirect_account">
