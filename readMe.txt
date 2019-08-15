@@ -1,5 +1,5 @@
 Hi
-The description of the system.
+
 Please clone the Barrows_python folder 
 Create your environment and install the below packages:
 
