@@ -16,8 +16,8 @@ class Clients(models.Model):
     def get_absolute_url(self):
         return reverse('clients')
 
-# timezone.now I'm not using () beacuse I would not like yo execute this function() as yes
-# Until execution
+# timezone.now I'm not using () beacuse I would not like to execute this function() as yet
+# Until execution of my form 
 
 
 class Projects(models.Model):
